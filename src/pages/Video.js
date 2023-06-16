@@ -1,4 +1,5 @@
 import React,{ useRef, useState } from 'react'
+import VideoFooter from "./components/footer/VideoFooter";
 import "./video.css"
 
 function Video() {
@@ -19,18 +20,19 @@ function Video() {
 
   return (
     <div className='video'>
-      {  <video className='video__player' 
+       <video className='video__player' 
        ref={videoRef}
        onClick={handleStart}
        loop
-       src='https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4?t=2023-05-22T19%3A37%3A45.885Z'
-       >
-       </video> }
-       {/* <iframe src="https://www.youtube.com/embed/UXAZR9UGhgk" 
+       src='https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4?t=2023-05-22T19%3A37%3A45.885Z'></video> 
+      {/*  <iframe src="https://www.youtube.com/embed/UXAZR9UGhgk" 
        className='video__player'  ref={videoRef}
        onClick={handleStart}
-       loop></iframe> */}
-
+       loop></iframe>  */}
+       {/* Side bar  */} 
+        
+       {/* Footer */} 
+       <VideoFooter />
        
     </div>
   )
