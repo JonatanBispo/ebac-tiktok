@@ -2,8 +2,9 @@ import React,{ useRef, useState } from 'react'
 import VideoFooter from "./components/footer/VideoFooter";
 import VideoSidebar from './components/sidebar/VideoSidebar';
 import "./video.css"
+import { UTurnLeftRounded } from '@mui/icons-material';
 
-function Video() {
+function Video({likes, messages, shares, name, description, music, url}) {
     const videoRef= useRef(null)
     const [play, setPlay] = useState(false)
     function handleStart() {
@@ -25,16 +26,29 @@ function Video() {
        ref={videoRef}
        onClick={handleStart}
        loop
-       src='https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4?t=2023-05-22T19%3A37%3A45.885Z'></video> 
+       src={url}
+       >
+        </video> 
       {/*  <iframe src="https://www.youtube.com/embed/UXAZR9UGhgk" 
        className='video__player'  ref={videoRef}
        onClick={handleStart}
        loop></iframe>  */}
        {/* Side bar  */} 
-       <VideoSidebar />
+       <VideoSidebar
+       likes={likes}
+       messages={messages}
+       shares={shares} 
+      
+
+
+       />
         
        {/* Footer */} 
-       <VideoFooter />
+       <VideoFooter
+        name={name}
+        description={description}
+        music={music}
+       />
        
     </div>
   )
