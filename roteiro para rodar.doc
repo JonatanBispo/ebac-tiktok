@@ -1,3 +1,7 @@
 Instalar o node js 
 rodar o terminal do vs code o comando npm install 
 incializar o programa com o comando npm start 
+
+
+caso o banco não funcione rodar no terminal o comando 
+npm install firebase
