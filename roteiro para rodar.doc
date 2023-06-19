@@ -5,3 +5,9 @@ incializar o programa com o comando npm start
 
 caso o banco não funcione rodar no terminal o comando 
 npm install firebase
+
+comando para instalar a instancia do firebase para deixar o projeto online 
+npm install -g firebase-tools
+
+comando para liberar o firebase no windowns 
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
